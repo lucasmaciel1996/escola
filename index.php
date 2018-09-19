@@ -42,6 +42,10 @@
                 <input type="text" name="telefone"/>
             </div>
             <div>
+                <label>CPF</label>
+                <input type="text" name="cpf"/>
+            </div>
+            <div>
                 <label>Email</label>
                 <input type="text" name="email"/>
             </div>
