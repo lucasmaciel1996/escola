@@ -26,6 +26,12 @@
             th{
                 background-color: silver;
             }
+            .msg-erro{
+                color: red;
+                border: 1px solid;
+                padding: 4px;
+                display: none;
+             }
             
         </style>
     </head> 
@@ -33,9 +39,12 @@
         <h1>Cadastro de Alunos</h1>
         <fieldset>
             <legend>Dados Alunos</legend>
+            <div class="msg-erro">
+                Messagem de erros
+            </div>
             <div>
-                <label>Nome</label>
-                <input type="text" name="nome" />
+                <label>* Nome</label>
+                <input type="text" name="nome" required="true"/>
             </div>
             <div>
                 <label>Telefone</label>
@@ -52,12 +61,12 @@
             <div>
                 <label>Turma</label>
                 <select name="turma">
-                    <option>Selecione uma turma</option>
-                    <option>PHP1</option>
-                    <option>PHP2</option>
-                    <option>MYSQL</option>
-                    <option>AJAX</option>
-                    <option>HTML</option>
+                    <option value="0">Selecione uma turma</option>
+                    <option value="PHP1">PHP1</option>
+                    <option value="PHP2">PHP2</option>
+                    <option value="MYSQL">MYSQL</option>
+                    <option value="AJAX">AJAX</option>
+                    <option value="HTML">HTML</option>
                     
                     
                 </select>
@@ -73,7 +82,8 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>          
+                    <th>Nome</th>
+                    <th>CPF</th>
                     <th>Sexo</th>
                     <th>Telefone</th>
                     <th>Email</th>
@@ -83,6 +93,7 @@
             <tbody>
                 <tr>
                     <td>129</td>
+                    <td>115.115.155-45</td>
                     <td>Joao Ricardo</td>          
                     <td>M</td>
                     <td>(41)3333-4545</td>

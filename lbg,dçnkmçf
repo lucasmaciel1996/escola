@@ -1,0 +1,95 @@
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  1) <html>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  2)     <head>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  3)         <title>Cadastro de Aluno</title>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  4)         <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  5)          <script src="js/form.js" type="text/javascript"></script>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  6)         <style>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  7)             label{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  8)                 width: 100px;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300  9)                 display: inline-block;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 10)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 11)             div{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 12)                 margin: 10px 0;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 13)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 14)             fieldset{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 15)                 width: 400px;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 16)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 17)             table{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 18)                 margin: 10px 0;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 19)                 border:1px solid;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 20)                 border-collapse: collapse;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 21)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 22)             th,td{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 23)                 border:1px solid;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 24)                 padding: 4px;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 25)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 26)             th{
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 27)                 background-color: silver;
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 28)             }
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 29)             
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 30)         </style>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 31)     </head> 
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 32)     <body>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 33)         <h1>Cadastro de Alunos</h1>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 34)         <fieldset>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 35)             <legend>Dados Alunos</legend>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 36)             <div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 37)                 <label>Nome</label>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 38)                 <input type="text" name="nome" />
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 39)             </div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 40)             <div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 41)                 <label>Telefone</label>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 42)                 <input type="text" name="telefone"/>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 43)             </div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 44)             <div>
+f408bcb6 (lucasmaciel1996 2018-09-19 20:21:58 -0300 45)                 <label>CPF</label>
+f408bcb6 (lucasmaciel1996 2018-09-19 20:21:58 -0300 46)                 <input type="text" name="cpf"/>
+f408bcb6 (lucasmaciel1996 2018-09-19 20:21:58 -0300 47)             </div>
+f408bcb6 (lucasmaciel1996 2018-09-19 20:21:58 -0300 48)             <div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 49)                 <label>Email</label>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 50)                 <input type="text" name="email"/>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 51)             </div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 52)             <div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 53)                 <label>Turma</label>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 54)                 <select name="turma">
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 55)                     <option>Selecione uma turma</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 56)                     <option>PHP1</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 57)                     <option>PHP2</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 58)                     <option>MYSQL</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 59)                     <option>AJAX</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 60)                     <option>HTML</option>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 61)                     
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 62)                     
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 63)                 </select>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 64)             </div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 65)             <div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 66)                 <label>Sexo</label>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 67)                 <input type="radio" name="sexo" value="M">Masculuino
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 68)                 <input type="radio" name="sexo" value="F">Femenino
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 69)             </div>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 70)             <button id="btn-cadastrar">Cadastrar</button>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 71)         </fieldset>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 72)         <table>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 73)             <thead>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 74)                 <tr>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 75)                     <th>ID</th>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 76)                     <th>Nome</th>          
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 77)                     <th>Sexo</th>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 78)                     <th>Telefone</th>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 79)                     <th>Email</th>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 80)                     <th>Turma</th>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 81)                 </tr>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 82)             </thead>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 83)             <tbody>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 84)                 <tr>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 85)                     <td>129</td>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 86)                     <td>Joao Ricardo</td>          
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 87)                     <td>M</td>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 88)                     <td>(41)3333-4545</td>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 89)                     <td>joaoricardo@email.com</td>
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 90)                     <td>PHP1</td>  
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 91)                 </tr>  
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 92)             </tbody>    
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 93)         </table>    
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 94)     </body>    
+^8948f90 (lucasmaciel1996 2018-09-19 19:51:42 -0300 95) </html>
