@@ -3,6 +3,7 @@
         <title>Cadastro de Aluno</title>
         <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
          <script src="js/form.js" type="text/javascript"></script>
+         <script src="js/jquery.mask.js" type="text/javascript"></script>
         <style>
             label{
                 width: 100px;
@@ -31,6 +32,13 @@
                 border: 1px solid;
                 padding: 4px;
                 display: none;
+             }
+             .input-erro{
+                 color:red;
+                 
+             }
+             .input-erro input{
+                 color: red;
              }
             
         </style>
@@ -90,7 +98,7 @@
                     <th>Turma</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="lista">
                 <tr>
                     <td>129</td>
                     <td>115.115.155-45</td>
@@ -101,6 +109,7 @@
                     <td>PHP1</td>  
                 </tr>  
             </tbody>    
-        </table>    
+        </table>
+        
     </body>    
 </html>
