@@ -16,6 +16,7 @@ $(function()
                     "<td>"+$('input[name=telefone]').val()+"</td>"+
                     "<td>"+$('input[name=email]').val()+"</td>"+ 
                     "<td>"+$('select').val()+"</td>"+
+                    '<td><a href="#" class="btn-del">[X]</a></td>'+
                 "</tr>";
                //console.log(html);
                 $('#lista').append(html);
@@ -28,7 +29,7 @@ $(function()
         }  
     });//fim click
     $('input[name=telefone]').keydown(function (ev){
-        console.log(ev.keyCode);
+       /// console.log(ev.keyCode);
         if(((ev.keyCode<48 || ev.keyCode >57) && 
             (ev.keyCode <96 || ev.keyCode>105) && 
             (ev.keyCode != 46 || ev.keyCode !=8)
@@ -36,7 +37,11 @@ $(function()
         {
             return false;
         }   
-    });
+    });//fim keydown
+    //acao para delete 
+    $("#lista").on('click','.btn-del',function(){
+        $(this).parent().parent().remove();
+    });//fim delete
     
 });
 function valida()
@@ -99,6 +104,6 @@ function valida()
            correto =false;
        }
        
-       console.log(correto);
+       //console.log(correto);
        return correto;
 }

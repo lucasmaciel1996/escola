@@ -40,6 +40,12 @@
              .input-erro input{
                  color: red;
              }
+             .btn-del{
+                 color:red;
+                 border: 2px solid;
+                 border-radius: 40px;
+                 
+             }
             
         </style>
     </head> 
@@ -96,6 +102,7 @@
                     <th>Telefone</th>
                     <th>Email</th>
                     <th>Turma</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody id="lista">
@@ -106,7 +113,8 @@
                     <td>M</td>
                     <td>(41)3333-4545</td>
                     <td>joaoricardo@email.com</td>
-                    <td>PHP1</td>  
+                    <td>PHP1</td>
+                    <td><a href="#" class="btn-del">[X]</a></td>
                 </tr>  
             </tbody>    
         </table>
