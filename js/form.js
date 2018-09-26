@@ -8,25 +8,33 @@ $(function()
     {   
         if(valida()==true)
         {
-           var html = "<tr>"+
-                    "<td> ID</th>"+
-                    "<td>"+$('input[name=nome]').val()+"</td>"+
-                    "<td>"+$('input[name=cpf]').val()+"</td>"+
-                    "<td>"+$('input[type=radio]:checked').val()+"</td>"+
-                    "<td>"+$('input[name=telefone]').val()+"</td>"+
-                    "<td>"+$('input[name=email]').val()+"</td>"+ 
-                    "<td>"+$('select').val()+"</td>"+
-                    '<td><a href="#" class="btn-del">[X]</a></td>'+
-                "</tr>";
-               //console.log(html);
-                $('#lista').append(html);
-                //lista input 
-                $('input[type=text]').val('');
-                //limpa select
-                $('select').val('0');
-                //limpa radio
-                $('input[name=sexo]').prop('checked',false);
-        }  
+            var dados={
+              nome:$('input[name=nome]').val(),
+              cpf:$('input[name=cpf]').val(),
+              sexo:$('input[type=radio]:checked').val(),
+              telefone:$('input[name=telefone]').val(),
+              email:$('input[name=email]').val(),
+              turma:$('select').val()          
+            };
+            
+            $.post('controller/alunoInserir.php',dados,function(res){
+              if(res=="true"){
+                  geraLista();
+           
+              }else{
+                  alert('Ocorreu um erro ao inserir o aluno');
+              }    
+            });
+            
+            //console.log(html);
+             $('#lista').append(html);
+             //lista input 
+             $('input[type=text]').val('');
+             //limpa select
+             $('select').val('0');
+             //limpa radio
+             $('input[name=sexo]').prop('checked',false);
+     }  
     });//fim click
     $('input[name=telefone]').keydown(function (ev){
        /// console.log(ev.keyCode);
@@ -40,10 +48,27 @@ $(function()
     });//fim keydown
     //acao para delete 
     $("#lista").on('click','.btn-del',function(){
-        $(this).parent().parent().remove();
+        //$(this).parent().parent().remove();
+          var info={
+                 id: $(this).parent().parent().attr('valid')
+             };//fimgetInfo
+             
+        $.getJSON('controller/alunoDeletar.php',info, function(res){
+            if(res==true){
+                alert('Resgistro Deletado');
+                geraLista();
+                
+            }else{
+                alert('Erro ao deletar');
+            }
+        });//fimgetjson
+          
     });//fim delete
     
-});
+    
+   geraLista();  
+    
+});//fim ready
 function valida()
 {
      var correto =true;
@@ -106,4 +131,27 @@ function valida()
        
        //console.log(correto);
        return correto;
+}
+function geraLista()
+{
+   //limpa tabela
+   $('#lista').empty();
+    $.getJSON('controller/alunosListar.php',function(dados){
+          ///console.log(dados);
+          dados.forEach(function(val,idx){
+              //console.log(idx,val);
+               var html = '<tr valid="'+val.id+'">'+
+                       "<td>"+val.id+"</th>"+
+                       "<td>"+val.nome+"</td>"+
+                       "<td>"+val.cpf+"</td>"+
+                       "<td>"+val.sexo+"</td>"+
+                       "<td>"+val.telefone+"</td>"+
+                       "<td>"+val.email+"</td>"+ 
+                       "<td>"+val.turma+"</td>"+
+                       '<td><a href="#" class="btn-del">[X]</a></td>'+
+                   "</tr>";
+           $('#lista').append(html);
+          });//fim Forearh 
+       });//fim getJSON
+
 }

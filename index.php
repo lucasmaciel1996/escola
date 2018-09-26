@@ -106,7 +106,7 @@
                 </tr>
             </thead>
             <tbody id="lista">
-                <tr>
+               <!-- <tr>
                     <td>129</td>
                     <td>115.115.155-45</td>
                     <td>Joao Ricardo</td>          
@@ -115,7 +115,7 @@
                     <td>joaoricardo@email.com</td>
                     <td>PHP1</td>
                     <td><a href="#" class="btn-del">[X]</a></td>
-                </tr>  
+                </tr>-->  
             </tbody>    
         </table>
         

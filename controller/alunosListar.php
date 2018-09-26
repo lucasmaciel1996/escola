@@ -5,4 +5,5 @@
   $alunos =  ListaAlunos();
    //testart Conexao
   // var_dump($con);
-  var_dump($alunos);
+  //var_dump($alunos);
+  echo json_encode($alunos);

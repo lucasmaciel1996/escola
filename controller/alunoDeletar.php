@@ -1,8 +1,10 @@
 <?php
   require '../model/alunos.php';
   
-  $id=7;
+  $id= $_GET['id'];
   //chama funcao
   $res =  DeletarAluno($id);
   //mostrar na tela
-  var_dump($res);
+  //var_dump($id);
+  echo json_encode($res);
+  

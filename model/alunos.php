@@ -7,6 +7,7 @@
      $server="localhost";
      
      $con = mysqli_connect($server, $usuario, $senha, $banco);
+     mysqli_set_charset($con, 'utf8');
      return $con;     
  }
  function ListaAlunos()
