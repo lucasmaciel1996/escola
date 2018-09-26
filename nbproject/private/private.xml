@@ -5,8 +5,10 @@
         <group>
             <file>file:/home/aluno/lucas/ajax/index.php</file>
             <file>file:/home/aluno/lucas/ajax/model/alunos.php</file>
+            <file>file:/home/aluno/lucas/ajax/controller/alunoInserir.php</file>
             <file>file:/home/aluno/lucas/ajax/js/form.js</file>
             <file>file:/home/aluno/lucas/ajax/controller/alunoDeletar.php</file>
+            <file>file:/home/aluno/lucas/ajax/controller/alunosListar.php</file>
         </group>
     </open-files>
 </project-private>

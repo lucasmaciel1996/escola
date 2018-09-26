@@ -20,20 +20,18 @@ $(function()
             $.post('controller/alunoInserir.php',dados,function(res){
               if(res=="true"){
                   geraLista();
-           
+                //lista input 
+                $('input[type=text]').val('');
+                //limpa select
+                $('select').val('0');
+                //limpa radio
+                $('input[name=sexo]').prop('checked',false);
               }else{
                   alert('Ocorreu um erro ao inserir o aluno');
               }    
             });
             
-            //console.log(html);
-             $('#lista').append(html);
-             //lista input 
-             $('input[type=text]').val('');
-             //limpa select
-             $('select').val('0');
-             //limpa radio
-             $('input[name=sexo]').prop('checked',false);
+          
      }  
     });//fim click
     $('input[name=telefone]').keydown(function (ev){
